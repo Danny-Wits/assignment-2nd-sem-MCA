@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void matix_multiplication(int **m1, int **m2, int r1, int c1, int r2, int c2)
+void matix_multiplication(int m1[][4], int m2[][2], int r1, int c1, int r2, int c2)
 {
 
     if (c1 != r2)
@@ -43,8 +43,7 @@ void matix_multiplication(int **m1, int **m2, int r1, int c1, int r2, int c2)
 
 int main()
 {
-    int m1[2][4] = {{1, 2, 3, 4},
-                    {5, 6, 7, 8}};
+    int m1[2][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}};
     int m2[4][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}};
     for (int i = 0; i < 2; i++)
     {
@@ -65,7 +64,8 @@ int main()
         cout << "\n";
     }
 
-    // matix_multiplication(m1, m2, 2, 4, 4, 2);
+    matix_multiplication(m1, m2, 2, 4, 4, 2);
+    
 
     return 0;
 }
