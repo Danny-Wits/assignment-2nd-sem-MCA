@@ -1,62 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="View all registered MCA students at the University of Jammu.">
-  <title>Student List | MCA Department</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View all registered MCA students at the University of Jammu."
+    />
+    <title>Student List | MCA Department</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- ===== Navbar ===== -->
-  <nav class="navbar navbar-expand-md navbar-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <span class="brand_icon">MCA</span> Univ. of Jammu
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="main_nav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html"><i class="ph ph-house"></i> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="registration.html"><i class="ph ph-notebook"></i> Registration</a></li>
-          <li class="nav-item"><a class="nav-link active" href="students.html"><i class="ph ph-users"></i> Student List</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- ===== Student List ===== -->
-  <section class="py-5">
-    <div class="container">
-      <h1 class="fw-bold mb-4"><i class="ph ph-student"></i> Registered Students</h1>
-
-      <!-- Loading -->
-      <div class="text-center py-5" id="loading_indicator">
-        <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex align-items-center gap-2"
+          href="index.html"
+        >
+          <span class="brand_icon">MCA</span> Univ. of Jammu
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main_nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"
+                ><i class="ph ph-house"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registration.html"
+                ><i class="ph ph-notebook"></i> Registration</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="students.html"
+                ><i class="ph ph-users"></i> Student List</a
+              >
+            </li>
+          </ul>
         </div>
-        <p class="text-muted mt-2">Fetching student records...</p>
       </div>
+    </nav>
 
-      <!-- Student list container -->
-      <div id="student_list"></div>
-    </div>
-  </section>
+    <!-- ===== Student List ===== -->
+    <section class="py-5">
+      <div class="container">
+        <h1 class="fw-bold mb-4">
+          <i class="ph ph-student"></i> Registered Students
+        </h1>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer text-center text-light py-3">
-    <div class="container">
-      <small>&copy; 2026 MCA Department, University of Jammu. All rights reserved.</small>
-    </div>
-  </footer>
+        <!-- Loading -->
+        <div class="text-center py-5" id="loading_indicator">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="text-muted mt-2">Fetching student records...</p>
+        </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="app.js"></script>
-</body>
+        <!-- Student list container -->
+        <div id="student_list"></div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer text-center text-light py-3">
+      <div class="container">
+        <small
+          >&copy; 2026 MCA Department, University of Jammu. All rights
+          reserved.</small
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
