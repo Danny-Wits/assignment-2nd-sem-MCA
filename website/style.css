@@ -1,0 +1,126 @@
+/* ============================================
+   MCA Department — Custom Theme Overrides
+   (Bootstrap 5 handles the heavy lifting)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+
+/* ---------- Theme Variables ---------- */
+:root {
+  --primary: #002045;
+  --primary-light: #1a365d;
+  --accent: #adc7f7;
+  --surface: #f0f3ff;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: var(--primary) !important;
+  box-shadow: 0 2px 12px rgba(0, 32, 69, 0.18);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.brand_icon {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+/* ---------- Hero ---------- */
+.hero_section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.hero_logo {
+  width: 72px;
+  height: 72px;
+  background: var(--accent);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+/* ---------- Marquee ---------- */
+.announcement_bar {
+  background: #dee8ff;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+}
+
+/* ---------- Faculty Card (mobile) ---------- */
+.faculty_card {
+  border-left: 3px solid var(--primary) !important;
+  border-radius: 0 !important;
+}
+
+/* ---------- Faculty Table ---------- */
+.faculty_table thead {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ---------- Form ---------- */
+.form_wrapper {
+  background: var(--surface);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ---------- Student List ---------- */
+.student_avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ---------- Toast ---------- */
+.toast_box {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  z-index: 9999;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.toast_box.toast_box--visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: auto;
+  background: var(--primary);
+}

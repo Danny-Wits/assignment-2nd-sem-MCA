@@ -19,8 +19,8 @@ int search(int item, int low, int high, int *array, int size)
 int main()
 {
     int array[] = {1, 2, 3, 4, 5, 6, 7};
-    cout << "Found at : " << search(2, 0, 6, array, 7) << "\n";
-    cout << "Found at : " << search(6, 0, 6, array, 7) << "\n";
-    cout << "Found at : " << search(8, 0, 6, array, 7);
+    cout << "Found 2 at : " << search(2, 0, 6, array, 7) << "\n";
+    cout << "Found 6 at : " << search(6, 0, 6, array, 7) << "\n";
+    cout << "Found 8 at : " << search(8, 0, 6, array, 7);
     return 0;
 }
