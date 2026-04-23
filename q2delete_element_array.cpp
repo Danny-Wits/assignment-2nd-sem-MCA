@@ -15,7 +15,7 @@ int main()
     int array[] = {1, 2, 3, 4, 5, 6, 7};
     remove(3, array, 7);
     for (int i : array)
-    {
+    { 
         cout << i << " , ";
     }
 

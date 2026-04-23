@@ -10,7 +10,6 @@ int helper(int *array, int size, int low, int high)
     if (high < low)
         return;
     int pivot = array[low];
-    low
 }
 int main()
 {
