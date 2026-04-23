@@ -3,7 +3,7 @@
    (Bootstrap 5 handles the heavy lifting)
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap");
 
 /* ---------- Theme Variables ---------- */
 :root {
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,9 +45,19 @@ body {
 
 /* ---------- Hero ---------- */
 .hero_section {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 32, 69, 0.699) 0%,
+      rgba(26, 54, 93, 0.747) 100%
+    ),
+    url("hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  padding: 3rem 0;
+  padding: 5rem 0;
+  min-height: 60vh;
 }
 
 .hero_logo {
@@ -110,7 +120,9 @@ body {
   transform: translateX(-50%) translateY(120%);
   z-index: 9999;
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   pointer-events: none;
 }
 
