@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Practical 7 - Largest Among Three (ReactJS)</title>
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+function App(){
+const [a,setA]=React.useState('');
+const [b,setB]=React.useState('');
+const [c,setC]=React.useState('');
+const [res,setRes]=React.useState('');
+function find(){
+setRes("Largest: "+Math.max(+a,+b,+c));
+}
+return(
+<div>
+<h2>Find Largest Among Three Numbers (ReactJS)</h2>
+<input type="number" placeholder="Number 1" value={a} onChange={e=>setA(e.target.value)}/><br/><br/>
+<input type="number" placeholder="Number 2" value={b} onChange={e=>setB(e.target.value)}/><br/><br/>
+<input type="number" placeholder="Number 3" value={c} onChange={e=>setC(e.target.value)}/><br/><br/>
+<button onClick={find}>Find Largest</button>
+<p>{res}</p>
+</div>
+);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

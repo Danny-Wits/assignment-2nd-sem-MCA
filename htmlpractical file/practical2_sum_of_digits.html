@@ -1,0 +1,17 @@
+<html>
+<head><title>Practical 2 - Sum of Digits</title></head>
+<body>
+<h2>Sum of Digits of a Three Digit Number</h2>
+<input id="num" type="number" placeholder="Enter 3 digit number">
+<button onclick="calc()">Find Sum</button>
+<p id="res"></p>
+<script>
+function calc(){
+var n=document.getElementById('num').value;
+var sum=0;
+for(var i=0;i<n.length;i++) sum+=+n[i];
+document.getElementById('res').innerText="Sum of digits: "+sum;
+}
+</script>
+</body>
+</html>

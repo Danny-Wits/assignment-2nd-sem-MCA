@@ -1,0 +1,20 @@
+<html>
+<head><title>Practical 5 - First 20 Primes</title></head>
+<body>
+<h2>First 20 Prime Numbers</h2>
+<button onclick="find()">Find</button>
+<p id="res"></p>
+<script>
+function find(){
+var primes=[],n=2;
+while(primes.length<20){
+var ok=true;
+for(var i=2;i<=Math.sqrt(n);i++){if(n%i==0){ok=false;break;}}
+if(ok) primes.push(n);
+n++;
+}
+document.getElementById('res').innerText=primes.join(", ");
+}
+</script>
+</body>
+</html>

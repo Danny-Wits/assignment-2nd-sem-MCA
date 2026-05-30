@@ -1,0 +1,19 @@
+<html>
+<head><title>Practical 4 - Armstrong Numbers</title></head>
+<body>
+<h2>Armstrong Numbers from 100 to 500</h2>
+<button onclick="find()">Find</button>
+<p id="res"></p>
+<script>
+function find(){
+var r=[];
+for(var i=100;i<=500;i++){
+var s=0,t=i.toString();
+for(var j=0;j<t.length;j++) s+=Math.pow(+t[j],t.length);
+if(s==i) r.push(i);
+}
+document.getElementById('res').innerText="Armstrong Numbers: "+r.join(", ");
+}
+</script>
+</body>
+</html>

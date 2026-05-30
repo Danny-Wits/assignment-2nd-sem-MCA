@@ -1,0 +1,30 @@
+<html>
+<head><title>Practical 6 - Keyboard & Mouse Events</title>
+<style>
+#box{width:200px;height:200px;background:#ccc;display:flex;align-items:center;justify-content:center;margin:10px 0;cursor:pointer}
+</style>
+</head>
+<body>
+<h2>Keyboard & Mouse Events</h2>
+<input id="inp" placeholder="Type here for keyboard events"><br><br>
+<div id="box">Hover/Click Me</div>
+<p id="log"></p>
+<script>
+var log=document.getElementById('log');
+function show(e){log.innerHTML=e+"<br>"+log.innerHTML;}
+var inp=document.getElementById('inp');
+inp.onkeydown=function(e){show("keydown: "+e.key);};
+inp.onkeyup=function(e){show("keyup: "+e.key);};
+inp.onkeypress=function(e){show("keypress: "+e.key);};
+var box=document.getElementById('box');
+box.onclick=function(){show("click");};
+box.ondblclick=function(){show("dblclick");};
+box.onmousedown=function(){show("mousedown");};
+box.onmouseup=function(){show("mouseup");};
+box.onmouseover=function(){show("mouseover");};
+box.onmouseout=function(){show("mouseout");};
+box.onmousemove=function(e){show("mousemove: "+e.clientX+","+e.clientY);};
+box.oncontextmenu=function(e){e.preventDefault();show("contextmenu (right-click)");};
+</script>
+</body>
+</html>

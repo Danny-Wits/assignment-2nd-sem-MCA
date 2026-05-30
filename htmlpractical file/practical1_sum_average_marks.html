@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <title>Practical 1 - Sum & Average of Marks</title>
+</head>
+
+<body>
+    <h2>Sum & Average of Marks</h2>
+    <input id="s1" type="number" placeholder="Subject 1"><br><br>
+    <input id="s2" type="number" placeholder="Subject 2"><br><br>
+    <input id="s3" type="number" placeholder="Subject 3"><br><br>
+    <input id="s4" type="number" placeholder="Subject 4"><br><br>
+    <button onclick="calc()">Calculate</button>
+    <p id="res"></p>
+    <script>
+        function calc() {
+            var a = +document.getElementById('s1').value, b = +document.getElementById('s2').value, c = +document.getElementById('s3').value, d = +document.getElementById('s4').value;
+            var sum = a + b + c + d;
+            document.getElementById('res').innerHTML = "Sum: " + sum + "<br>Average: " + (sum / 4);
+        }
+    </script>
+</body>
+
+</html>
